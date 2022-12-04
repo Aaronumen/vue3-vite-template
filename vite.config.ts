@@ -2,9 +2,8 @@ import { defineConfig } from "vite"
 import vue from "@vitejs/plugin-vue"
 import AutoImport from "unplugin-auto-import/vite"
 import path from "path"
-import postcsspxtoviewport from "postcss-px-to-viewport"
 import Components from "unplugin-vue-components/vite"
-import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
+import { NaiveUiResolver } from "unplugin-vue-components/resolvers"
 import commpressPlugin from "vite-plugin-compression"
 import { visualizer } from "rollup-plugin-visualizer"
 import vueJsx from "@vitejs/plugin-vue-jsx"
@@ -23,12 +22,13 @@ export default defineConfig({
         "vue",
         "vue-router",
         "pinia",
-        {'naive-ui': [
-          'useDialog',
-          'useMessage',
-          'useNotification',
-          'useLoadingBar'
-        ],
+        {
+          "naive-ui": [
+            "useDialog",
+            "useMessage",
+            "useNotification",
+            "useLoadingBar"
+          ],
           "lodash-es": ["debouce"],
           dayjs: [["default", "dayjs"]]
         }
@@ -60,9 +60,7 @@ export default defineConfig({
   esbuild: {
     jsxInject: `import React from 'react'`
   },
-  css: {
-    
-  },
+  css: {},
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
