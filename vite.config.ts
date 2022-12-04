@@ -60,7 +60,15 @@ export default defineConfig({
   esbuild: {
     jsxInject: `import React from 'react'`
   },
-  css: {},
+  css: {
+    preprocessorOptions: {
+      less: {
+        modifyVars: {
+          hack: `true; @import (reference) "${path.resolve('src/styles/global.less')}";`,
+        },
+      },
+    }
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
