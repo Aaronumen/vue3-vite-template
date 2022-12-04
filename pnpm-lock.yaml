@@ -21,7 +21,6 @@ specifiers:
   lodash-es: ^4.17.21
   naive-ui: ^2.34.2
   pinia: ^2.0.25
-  postcss-px-to-viewport: ^1.1.1
   prettier: ^2.7.1
   rollup-plugin-visualizer: ^5.8.3
   typescript: ^4.9.3
@@ -59,7 +58,6 @@ devDependencies:
   husky: 8.0.2
   less: 4.1.3
   lint-staged: 13.0.4
-  postcss-px-to-viewport: 1.1.1
   prettier: 2.8.0
   rollup-plugin-visualizer: 5.8.3
   typescript: 4.9.3
@@ -3331,11 +3329,6 @@ packages:
       boolbase: 1.0.0
     dev: true
 
-  /object-assign/4.1.1:
-    resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
-    engines: {node: '>=0.10.0'}
-    dev: true
-
   /object-inspect/1.12.2:
     resolution: {integrity: sha512-z+cPxW0QGUp0mcqcsgQyLVRDoXFQbXOwBaqyF7VIgI4TWNQsDHrBpUQslRmIfAoYWdYzs6UlKJtB2XJpTaNSpQ==}
     dev: true
@@ -3557,13 +3550,6 @@ packages:
       jsonc-parser: 3.2.0
       mlly: 1.0.0
       pathe: 1.0.0
-    dev: true
-
-  /postcss-px-to-viewport/1.1.1:
-    resolution: {integrity: sha512-2x9oGnBms+e0cYtBJOZdlwrFg/mLR4P1g2IFu7jYKvnqnH/HLhoKyareW2Q/x4sg0BgklHlP1qeWo2oCyPm8FQ==}
-    dependencies:
-      object-assign: 4.1.1
-      postcss: 8.4.19
     dev: true
 
   /postcss-selector-parser/6.0.11:
