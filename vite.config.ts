@@ -7,6 +7,7 @@ import { NaiveUiResolver } from "unplugin-vue-components/resolvers"
 import commpressPlugin from "vite-plugin-compression"
 import { visualizer } from "rollup-plugin-visualizer"
 import vueJsx from "@vitejs/plugin-vue-jsx"
+import autoprefixer from 'autoprefixer'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -61,6 +62,20 @@ export default defineConfig({
     jsxInject: `import React from 'react'`
   },
   css: {
+    postcss:{
+      plugins:[
+        autoprefixer({
+          overrideBrowserslist: [
+            "Android 4.1",
+            "iOS 7.1",
+            "Chrome > 31",
+            "ff > 31",
+            "ie >= 8"
+            //'last 10 versions', // 所有主流浏览器最近2个版本
+        ],
+        grid: true
+      })]
+    },
     preprocessorOptions: {
       less: {
         modifyVars: {
@@ -85,7 +100,6 @@ export default defineConfig({
         entryFileNames: "assets/js/[name]-[hash].js",
         assetFileNames: "assets/[ext]/[name]-[hash].[ext]",
         manualChunks(id) {
-          console.log(id)
           if (id.includes("node_modules/.pnpm")) {
             return id
               .toString()
