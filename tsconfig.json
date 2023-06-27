@@ -19,6 +19,7 @@
       "views/*":["src/views/*"],
       "components/*":["src/components/*"]
     },
+    "jsxImportSource":"react"
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue","auto-imports.d.ts","*.d.ts"],
   "exclude": ["node_moduls/**"],

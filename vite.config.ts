@@ -2,7 +2,6 @@ import { defineConfig } from "vite"
 import vue from "@vitejs/plugin-vue"
 import AutoImport from "unplugin-auto-import/vite"
 import path from "path"
-import postcsspxtoviewport from "postcss-px-to-viewport"
 import Components from "unplugin-vue-components/vite"
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import commpressPlugin from "vite-plugin-compression"
@@ -23,7 +22,8 @@ export default defineConfig({
         "vue",
         "vue-router",
         "pinia",
-        {'naive-ui': [
+        {
+          'naive-ui': [
           'useDialog',
           'useMessage',
           'useNotification',
@@ -61,7 +61,6 @@ export default defineConfig({
     jsxInject: `import React from 'react'`
   },
   css: {
-    
   },
   resolve: {
     alias: {
