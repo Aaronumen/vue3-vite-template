@@ -7,8 +7,8 @@ import { NaiveUiResolver } from "unplugin-vue-components/resolvers"
 import commpressPlugin from "vite-plugin-compression"
 import { visualizer } from "rollup-plugin-visualizer"
 import vueJsx from "@vitejs/plugin-vue-jsx"
-import autoprefixer from 'autoprefixer'
-import UnoCSS from 'unocss/vite'
+import autoprefixer from "autoprefixer"
+import UnoCSS from "unocss/vite"
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -64,8 +64,8 @@ export default defineConfig({
     jsxInject: `import React from 'react'`
   },
   css: {
-    postcss:{
-      plugins:[
+    postcss: {
+      plugins: [
         autoprefixer({
           overrideBrowserslist: [
             "Android 4.1",
@@ -74,16 +74,19 @@ export default defineConfig({
             "ff > 31",
             "ie >= 8"
             //'last 10 versions', // 所有主流浏览器最近2个版本
-        ],
-        grid: true
-      })]
+          ],
+          grid: true
+        })
+      ]
     },
     preprocessorOptions: {
       less: {
         modifyVars: {
-          hack: `true; @import (reference) "${path.resolve('src/styles/global.less')}";`,
-        },
-      },
+          hack: `true; @import (reference) "${path.resolve(
+            "src/styles/global.less"
+          )}";`
+        }
+      }
     }
   },
   resolve: {
