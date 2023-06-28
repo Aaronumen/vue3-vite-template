@@ -1,5 +1,5 @@
 <template>
-  <div class="home-app flex">
+  <div class="home-app flex" text="red 20px">
     首页
     <Demo></Demo>
   </div>
