@@ -32,7 +32,7 @@ export default defineConfig({
             "useNotification",
             "useLoadingBar"
           ],
-          "lodash-es": ["debouce"],
+          "lodash-es": ["debounce"],
           dayjs: [["default", "dayjs"]]
         }
         // 自定义导入的api
