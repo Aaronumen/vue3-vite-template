@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "@iconify-json/mdi": "^1.1.52",
+    "@types/lodash-es": "^4.17.8",
     "@types/rollup-plugin-visualizer": "^4.2.1",
     "@typescript-eslint/eslint-plugin": "^5.60.1",
     "@typescript-eslint/parser": "^5.60.1",
